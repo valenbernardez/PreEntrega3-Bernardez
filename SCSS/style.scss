@@ -6,120 +6,169 @@
 @import "layout/index.scss";
 
 
-  .navbar-brand img {
-    width: 90px;
-    height: 90px;
-    border-radius: 100%;
-    background-size: cover;
-    position:fixed;
-  }
-
   header {
 min-height: 80vh;
 max-height: 80%;
 display: flex;
     flex-direction: column;
-    background-image: url('../images/back1.jpg');
+    background-color: black;
     background-size: cover;
   }
 
-  .hero{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: flex-start;
-    justify-content: center;
-    min-height: 100vh;
-    max-height: 100%
-    
+.home {
+  background-color: black;
+}
+
+.gallery {
+  background-color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.5rem;
+  width: 100%;
+  margin-top: 10vh;
+  padding: 20px;
+}
+
+.single-card {
+  background-color: red;
+  height: 40vh;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.single-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
   }
+}
 
-  .hero h1{
-font-size: 30px;
-color:red;
-  }
+.card-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 40px;
+  text-transform: capitalize;
+}
 
-  .hero p {
-    font-size: 20px;
-    color:blue
-  }
+header {
+  min-height: 80vh;
+  max-height: 80%;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+}
 
-  .cta {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-  }
+.hero {
+  gap: 20px;
+  justify-content: center;
+  min-height: 100vh;
+  z-index: 100;
+}
 
-  .cta a:first-child {
-    text-decoration: none;
-    padding: 10px;
-    font-size: 20px;
-    color: pink;
-    background-color: aquamarine;
-    border: 1px solid black;
-transition: .3s;
-  }
+.hero h1 {
+  font-size: 30px;
+  color: red;
+}
 
-  .cta a:first-child:hover {
-    background-color: transparent;
-    color:black;
+.hero p {
+  font-size: 20px;
+  color: blue;
+}
 
-  }
+.cta {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
 
-  .cta a:last-child {
-    text-decoration: none;
-    padding: 10px;
-    font-size: 20px;
-    color: aquamarine;
-    background-color: black;
-    border: 1px solid black;
-    transition: .3s;
-  }
+.cta a:first-child {
+  text-decoration: none;
+  padding: 10px;
+  font-size: 20px;
+  color: pink;
+  background-color: aquamarine;
+  border: 1px solid black;
+  transition: 0.3s;
+}
 
-  .cta a:last-child:hover {
-    background-color: transparent;
-    color:white;
-    
-  }
+.cta a:first-child:hover {
+  background-color: transparent;
+  color: black;
+}
 
-  .row {
-    justify-content: space-evenly;
-    margin: 0;
-  }
+.cta a:last-child {
+  text-decoration: none;
+  padding: 10px;
+  font-size: 20px;
+  color: aquamarine;
+  background-color: black;
+  border: 1px solid black;
+  transition: 0.3s;
+}
 
-  .card {
-    padding: 0;
-    box-shadow: 5px 5px 5px 0px;
-  }
+.cta a:last-child:hover {
+  background-color: transparent;
+  color: white;
+}
 
-  .card-img-top {
-    border-radius: 0;
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
+.row {
+  justify-content: space-evenly;
+  margin: 0;
+}
 
-  }
+.card {
+  padding: 0;
+  box-shadow: 5px 5px 5px 0px;
+}
 
-  .title h2 {
-    background-color: blueviolet;
-    width: 200px;
-  }
+.card-img-top {
+  border-radius: 0;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
 
-  .carousel-inner , .carousel-item , .carousel-item-img {
-    height: 600px;
-object-fit: cover;
-padding: 5px;
-margin-top: 10px;
-  }
+.title h2 {
+  background-color: blueviolet;
+  width: 200px;
+}
 
-  .accordion{
-    margin-top: 200px;
-  }
+.carousel-inner,
+.carousel-item,
+.carousel-item-img {
+  height: 600px;
+  object-fit: cover;
+  padding: 5px;
+  margin-top: 10px;
+}
 
-  #flush-collapseOne img {
-    width: 500px;
-    height: 500px;
-    object-fit: cover;
+.accordion {
+  margin-top: 500px;
+}
 
-  }
+#flush-collapseOne img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+}
 
+#carouselExampleSlidesOnly {
+  width: 100%;
+  z-index: 0;
+}
+
+.form {
+  background-color: red;
+  margin-top: 25%;
+}
